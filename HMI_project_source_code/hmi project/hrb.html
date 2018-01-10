@@ -1,0 +1,530 @@
+
+<HTML>
+<HEAD>
+<STYLE>
+body
+{
+padding: 30px 30px 50px 30px;
+background-color:#CCC;
+}
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid green;
+  color:Black;
+  font-size:90%;
+  text-align:right;
+  }
+fieldset, legend {
+    border: 1px solid #eee;
+    background-color: #8FBC8F;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+    }
+#tbl
+{
+font-family:Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1.7em;
+    text-align:center;
+    border-collapse:collapse;
+}
+th{
+    padding:6px 10px;
+    text-transform:uppercase;
+    color:#444;
+    font-weight:bold;
+    text-shadow:1px 1px 1px #fff;
+    border-bottom:5px solid #444;
+}
+.table3 thead th:empty{
+    background:transparent;
+    border:none;
+}
+.table3 thead :nth-child(2),
+.table3 tfoot :nth-child(2){
+    background-color: #7FD2FF;
+}
+.table3 tfoot :nth-child(2){
+    -moz-border-radius:0px 0px 0px 5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+.table3 thead :nth-child(2){
+    -moz-border-radius:5px 0px 0px 0px;
+    -webkit-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+}
+.table3 thead :nth-child(3),
+.table3 tfoot :nth-child(3){
+    background-color: #45A8DF;
+}
+.table3 thead :nth-child(4),
+.table3 tfoot :nth-child(4){
+    background-color: #2388BF;
+}
+.table3 thead :nth-child(5),
+.table3 tfoot :nth-child(5){
+    background-color: #096A9F;
+}
+.table3 thead :nth-child(5){
+    -moz-border-radius:0px 5px 0px 0px;
+    -webkit-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+}
+.table3 tfoot :nth-child(5){
+    -moz-border-radius:0px 0px 5px 0px;
+    -webkit-border-bottom-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.table3 tfoot td{
+    font-size:38px;
+    font-weight:bold;
+    padding:15px 0px;
+    text-shadow:1px 1px 1px #fff;
+}
+.table3 tbody td{
+    padding:10px;
+}
+.table3 tbody tr:nth-child(4) td{
+    font-size:26px;
+    font-weight:bold;
+}
+.table3 tbody td:nth-child(even){
+    background-color:#444;
+    color:#444;
+    border-bottom:1px solid #444;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.39, rgb(189,189,189)),
+        color-stop(0.7, rgb(224,224,224))
+        );
+    background:-moz-linear-gradient(
+        center bottom,
+        rgb(189,189,189) 39%,
+        rgb(224,224,224) 70%
+        );
+    text-shadow:1px 1px 1px #fff;
+}
+ tbody td:nth-child(odd){
+    background-color:#555;
+    color:#f0f0f0;
+    border-bottom:1px solid #444;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.39, rgb(85,85,85)),
+        color-stop(0.7, rgb(105,105,105))
+        );
+    background:-moz-linear-gradient(
+        center bottom,
+        rgb(85,85,85) 39%,
+        rgb(105,105,105) 70%
+        );
+    text-shadow:1px 1px 1px #000;
+}
+tbody td:nth-last-child(1){
+    border-right:1px solid #222;
+}
+tbody th{
+    color:#696969;
+    text-align:right;
+    padding:0px 10px;
+    border-right:1px solid #aaa;
+}
+tbl2{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4em;
+    font-style: normal;
+    border-collapse:separate;
+}
+thead th{
+    padding:15px;
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    border:1px solid #93CE37;
+    border-bottom:3px solid #9ED929;
+    background-color:#9DD929;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.02, rgb(123,192,67)),
+        color-stop(0.51, rgb(139,198,66)),
+        color-stop(0.87, rgb(158,217,41))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(123,192,67) 2%,
+        rgb(139,198,66) 51%,
+        rgb(158,217,41) 87%
+        );
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+ thead th:empty{
+    background:transparent;
+    border:none;
+}
+tbody th{
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    background-color:#9DD929;
+    border:1px solid #93CE37;
+    border-right:3px solid #9ED929;
+    padding:0px 10px;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        right top,
+        color-stop(0.02, rgb(158,217,41)),
+        color-stop(0.51, rgb(139,198,66)),
+        color-stop(0.87, rgb(123,192,67))
+        );
+    background: -moz-linear-gradient(
+        left bottom,
+        rgb(158,217,41) 2%,
+        rgb(139,198,66) 51%,
+        rgb(123,192,67) 87%
+        );
+    -moz-border-radius:5px 0px 0px 5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+ tfoot td{
+    color: #9CD009;
+    font-size:32px;
+    text-align:center;
+    padding:10px 0px;
+    text-shadow:1px 1px 1px #444;
+}
+tfoot th{
+    color:#666;
+}
+tbody td{
+    padding:10px;
+    text-align:center;
+    background-color:#DEF3CA;
+    border: 2px solid #E7EFE0;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+}
+.table1 tbody span.check::before{
+    content : url(check0.png)
+}
+.demo
+{
+position:absolute;
+left:635px;
+top:457px;
+font-size:17;
+font-family:Arial;
+font-weight:bold;
+margin-top:35px;
+border-collapse:collapse;
+        height: 299px;
+        width: 272px;
+    }
+#demoname
+{
+font-size:15px
+}
+.btn
+{
+	background-color:#666666;
+	position:absolute;
+	top:355px;
+	left:1188px;
+	width: 62px;
+	height: 21px;
+	background-image: none;
+	right: auto;
+	bottom: auto;
+}
+    .auto-style1
+    {
+        width: 28px;
+    }
+</STYLE>
+
+<SCRIPT>
+    function myFun() {
+ var a = document.getElementById("aa").options[aa.selectedIndex].text;
+document.getElementById("demoaa").innerHTML= a;
+       var b = document.getElementById("ss").options[ss.selectedIndex].text;
+document.getElementById("demoss").innerHTML= b;
+    var c = document.getElementById("po").options[po.selectedIndex].text;
+document.getElementById("demora").innerHTML= c;
+var d = document.getElementById("p").options[p.selectedIndex].text;
+document.getElementById("demop").innerHTML= d;        
+        var e = document.form1.txtoffice.value;
+        document.getElementById("demooffice").innerHTML = e;
+
+      switch (true) {
+            case (b == "kurla"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 7 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "mankhurd"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 9 * 2;;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "vashi"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 11 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "belapur"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 19 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "kharghar"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 21 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "panvel"&&c=="II"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 25 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+    case (b == "kurla"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 55 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "mankhurd"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 66 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "vashi"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 77 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "belapur"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 89 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "kharghar"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 91 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "panvel"&&c=="I"&&d=="Return"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 99 * 2;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+          case (b == "kurla"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 7;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "mankhurd"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 9;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "vashi"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 11;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "belapur"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 19;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "kharghar"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 21;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "panvel"&&c=="II"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 25;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+    case (b == "kurla"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 55;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "mankhurd"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 66;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "vashi"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 77;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "belapur"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 89;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "kharghar"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 91;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+            case (b == "panvel"&&c=="I"&&d=="Single"):
+                var ns = document.getElementById("demooffice").innerHTML;
+                var value = parseInt(ns) * 99;
+                document.getElementById("demototal").innerHTML = value;
+                break;
+        }
+switch(true)
+{
+case(a=="cst"):
+document.getElementById("demor").innerHTML="Commute journey in 1HR";
+break;
+ }
+switch(true)
+{
+case(a=="cst"):
+document.getElementById("demod").innerHTML = Date();
+break;
+ }
+switch(true)
+{
+case(b=="kurla"&& d=="Single"):
+document.getElementById("demok").innerHTML="14km";
+break;
+case(b=="mankhurd"&& d=="Single"):
+document.getElementById("demok").innerHTML="22km";
+break;
+case(b=="vashi"&& d=="Single"):
+document.getElementById("demok").innerHTML="29km";
+break;
+case(b=="belapur"&& d=="Single"):
+document.getElementById("demok").innerHTML="39km";
+break;
+case(b=="kharghar"&& d=="Single"):
+document.getElementById("demok").innerHTML="41km";
+break;
+case(b=="panvel"&& d=="Single"):
+document.getElementById("demok").innerHTML="49km";
+break;
+case(b=="kurla" && d=="Return"):
+document.getElementById("demok").innerHTML="28km";
+break;
+case(b=="mankhurd" && d=="Return"):
+document.getElementById("demok").innerHTML="44km";
+break;
+case(b=="vashi" && d=="Return"):
+document.getElementById("demok").innerHTML="58km";
+break;
+case(b=="belapur" &&  d=="Return"):
+document.getElementById("demok").innerHTML="78km";
+break;
+case(b=="kharghar" && d=="Return"):
+document.getElementById("demok").innerHTML="82km";
+break;
+case(b=="belapur" && d=="Return"):
+document.getElementById("demok").innerHTML="90km";
+break;
+ }
+}
+</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+
+<BODY>
+<DIV class="color">
+<H1><marquee><img src="mrvc.jpg" height="70" width="480"></marquee><center>HARBOUR LINE</center></H1>
+<FIELDSET>
+<LEGEND> Route info </LEGEND>
+<TABLE align="center" id="tbl">
+<FORM name="form1">
+</TR>
+<TD width="140">Source</TD><TD><select id="aa">
+  <option>cst</option>
+</select></TD>
+<TD> &nbsp; &nbsp;Destination</TD><TD><select id="ss">
+  <option>kurla</option>
+  <option>mankhurd</option>
+<option>vashi</option>
+<option>belapur</option>
+<option>kharghar</option>
+<option>panvel</option>
+</select></TD>
+</TR>
+<TR>
+<TD width="140" > CLASS </TD><TD><select id="po">
+  <option>I</option>
+  <option>II</option>
+</select></TD>
+<TD style="text-indent:16px">TYPE:</TD><TD><select id="p">
+  <option>Single</option>
+  <option>Return</option>
+</select></TD>
+</TR>
+</TABLE>
+</FIELDSET></BR>
+<FIELDSET>
+<LEGEND> Ticket info </LEGEND>
+<TABLE id="tbl2">
+<TR>
+<TD> nos of tickets</TD><TD> <INPUT type="text" name="txtoffice" maxlength="4" size="10"/> </TD>
+</TR>
+</TABLE>
+</FIELDSET>
+<DIV class="btn">
+<button style="font-size:17" type="button" onclick='myFun()'>Submit</button>
+</DIV>
+<DIV class="demo">
+  <TABLE border="1">
+<TR>
+<TH colspan="5" width="120"><center><img src="logo.jpg" height=42 width="60">TICKET INFO</center></TH>
+</TR>
+<TR>
+<TD colspan="5" width="320"><p id="demoaa"><p id="demoss">to</p></TD>
+</TR>
+<TR>
+<TH colspan="5" width="320"><center>price info</center></TH>
+</TR>
+<TR>
+<TD>Class</TD><TD>Type</TD><TD class="auto-style1">Nos of tickets</TD><TD class="auto-style1">TOTAL PRICE:</TD><TD class="auto-style1">DISTANCE</TD>
+</TR>
+<TR>
+<TD>CLASS:-<p id="demora"></p></TD><TD>TYPE<p id="demop"></p></TD><TD><FONT face="arial" id="demooffice"></FONT></TD><TD>&#8377;<FONT face="arial" id="demototal"></FONT></TT></TD><TD><FONT face="arial" id="demok"></FONT></TT></TD>
+</TR>
+<TR>
+<TD class="auto-style1" colspan="2">DATE&TIME</TD><TD colspan="3"><p id="demod"></p></TT></TD>
+</TR>
+<TR>
+<TD class="auto-style1" colspan="2">REMINDER</TD><TD colspan="3"><p id="demor"></p></TT></TD>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+</BODY>
+</HTML> 
+

@@ -1,0 +1,41 @@
+<html>
+<title></title>
+<head>
+<body>
+ #thediv {
+    margin:0 auto;
+	height:500px;
+	width:200px;
+	overflow:hidden;
+	}
+
+</style>
+
+<input type="button" value ="-" onclick="zoom(0.9)"/>
+<input type="button" value ="+" onclick="zoom(1.1)"/>
+<div  id="thediv" style='position:absolute;z-index:0;left:2px;top:18px;width:100%;height:486px'>
+  <img id="pic" src='map.jpg' alt='[]'  usemap="#Map"/>
+<map name="Map">
+  <area shape="poly" coords="40,269,11,12,11,12,274,18,274,18,353,112,359,115,384,275,384,275,370,403,372,520,163,1562,46,521" href="wst.html">
+<area shape="rect" coords="357,16,721,1558" href="wst.html">
+<area shape="poly" coords="748,25,794,1562,1254,543,1268,58,1270,31" href="wst.html">
+</map>
+</div>
+
+<script>
+  window.onload = function(){
+    zoom(1)
+  }
+  function zoom(zm) {
+    img=document.getElementById("pic")
+    wid=img.width
+    ht=img.height
+    img.style.width=(wid*zm)+"px"
+    img.style.height=(ht*zm)+"px"
+    img.style.marginLeft = -(img.width/2) + "px";
+    img.style.marginTop = -(img.height/2) + "px";
+  }
+  </script>
+</body>
+</head>
+</html>
